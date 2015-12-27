@@ -14,6 +14,8 @@
 		C8822B411C2FCC7000B00049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8822B401C2FCC7000B00049 /* Assets.xcassets */; };
 		C8822B441C2FCC7000B00049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8822B421C2FCC7000B00049 /* LaunchScreen.storyboard */; };
 		C8822B4F1C2FCC7000B00049 /* ElemetdemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8822B4E1C2FCC7000B00049 /* ElemetdemoUITests.m */; };
+		C8822B791C2FD01000B00049 /* ALCocoaUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8822B771C2FD00300B00049 /* ALCocoaUIKit.framework */; };
+		C8822B7A1C2FD01000B00049 /* ALCocoaUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8822B771C2FD00300B00049 /* ALCocoaUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,20 @@
 			remoteInfo = Elemetdemo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C8822B5D1C2FCC9E00B00049 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C8822B7A1C2FD01000B00049 /* ALCocoaUIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C8822B311C2FCC7000B00049 /* Elemetdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elemetdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +56,7 @@
 		C8822B4A1C2FCC7000B00049 /* ElemetdemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElemetdemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8822B4E1C2FCC7000B00049 /* ElemetdemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElemetdemoUITests.m; sourceTree = "<group>"; };
 		C8822B501C2FCC7000B00049 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8822B771C2FD00300B00049 /* ALCocoaUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ALCocoaUIKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8822B791C2FD01000B00049 /* ALCocoaUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +81,7 @@
 		C8822B281C2FCC7000B00049 = {
 			isa = PBXGroup;
 			children = (
+				C8822B771C2FD00300B00049 /* ALCocoaUIKit.framework */,
 				C8822B331C2FCC7000B00049 /* Elemetdemo */,
 				C8822B4D1C2FCC7000B00049 /* ElemetdemoUITests */,
 				C8822B321C2FCC7000B00049 /* Products */,
@@ -121,6 +140,7 @@
 				C8822B2D1C2FCC7000B00049 /* Sources */,
 				C8822B2E1C2FCC7000B00049 /* Frameworks */,
 				C8822B2F1C2FCC7000B00049 /* Resources */,
+				C8822B5D1C2FCC9E00B00049 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,6 +363,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ALCocaoUIKit",
+				);
 				INFOPLIST_FILE = Elemetdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dusbeen.Elemetdemo;
@@ -354,6 +382,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ALCocaoUIKit",
+				);
 				INFOPLIST_FILE = Elemetdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dusbeen.Elemetdemo;
